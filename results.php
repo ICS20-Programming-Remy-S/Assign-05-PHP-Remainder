@@ -1,38 +1,68 @@
 <?php
 
-//message for the user
-  $message = "";
-  // Use first and second number user has entered for results
-    
+//message for user
+$message = "";
+
+//User input
   $userNumber = $_POST['userNumber'];
 
+  $min = $_POST['min'];
 
-  //initialize counter and factorial
+  $max = $_POST['max'];
 
-  $factorial = 1;
+  $display = $_POST['display'];
 
+//initialize couter and remainder
 
-  $counter =  1;
+$counter1 = $min;
 
-  //statement for the do while loop
-  do {
-    
-   //factorial calculation
-    $factorial = $factorial * $counter;
+$remainder = 0;
 
-    //increment counter
-    $counter++;
-
-  } while ($counter <= $userNumber);
-
-  //Message if user enters nothing 
-
-  if ($userNumber >= 0){
-    $message = $message . "The Factorial of " . $userNumber . " is " . $factorial;
+//statement for when a string is entered
+  
+ if ($min == "" || $max == "" || $userNumber == ""){
+    $message = "Please Enter a Min, Max and/or Number.";
   }
+
+   //statement for when min is larger than max
+
+else if ($min > $max){
+    $message = "Please enter a valid min.";
+  }
+
+   //loops for min to max and max to min
+  
   else {
-     $message = "Please Enter a Number";
+    //min to max loop
+    if ($display == "Min to Max"){
+      while ($counter1 <= $max){
+
+        $remainder = $userNumber % $counter1;
+
+        $message = $message . $userNumber . " % " . $counter1 . " = " . $remainder . "<br>";
+
+        $counter1 = $counter1 + 1;     
+
+        if ($counter1 == 0){
+          $counter1++;
+            }
+      }
+    }
+      else {
+        for ($counter = $max ;$counter >= $min; $counter = $counter - 1){
+
+          $remainder = $userNumber % $counter;
+
+          $message = $message . $userNumber . " % " . $counter . " = " . $remainder . "<br>";
+
+          if ($counter == 0){
+          $counter--;
+            }
+          
+        }
+      }
   }
+
   // Display Results back to User
   echo $message;
 ?>
