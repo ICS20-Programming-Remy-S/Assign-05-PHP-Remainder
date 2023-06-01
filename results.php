@@ -51,13 +51,14 @@ else if ($min > $max){
       else {
         for ($counter = $max ;$counter >= $min; $counter = $counter - 1){
 
+          if ($counter == 0){
+          $counter--;
+            }
+
           $remainder = $userNumber % $counter;
 
           $message = $message . $userNumber . " % " . $counter . " = " . $remainder . "<br>";
 
-          if ($counter == 0){
-          $counter--;
-            }
           
         }
       }

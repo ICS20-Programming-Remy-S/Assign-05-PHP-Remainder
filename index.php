@@ -9,10 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png" />
-    <link rel="manifest" href="./fav_index/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
     
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
@@ -52,15 +52,18 @@ echo "<h3>Please Entre your Number you Want the Remainder of(Use min and max for
     </form>
     
     <!-- iframe for the results to show on the web page. -->
-      <center>
+      <p>
     <iframe id="results" name="results">			
       results
     </iframe>
-      </center>
+      </p>
       <!-- Remainder image -->
       <h1>
-      <img src="./images/remainder.png" alt="remainder" width="75%" height="auto"/>
+      <img src="./images/remainder.png" alt="remainder" width="300" height="175"/>
       </h1>
+      <h5>
+      Thank you for visiting our online calculator where we are able to show you the remainder of any number you want. We provided you with a min and max range so you can display many different remainder calculations at. Unlike many other we are proud to say our calculator is avalable for positve and negetive numbers. Also, we like to be diffrent from the competition and we show you how our webpage works in code at https://replit.com/@Messi-Sui/Assign-05-HTML-Remainder#index.html. Finally, our webpage can display the claculations both ways from min to max and max to min.
+    </h5>
           </center>
   </body>
 </html>

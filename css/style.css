@@ -28,9 +28,16 @@ h3 {
   margin-left: 10%;
 }
 
-p {
+h5 {
+  background-color: #6fe286;
+  text-align: center;
+  padding: 20px;
   width: 80%;
   margin-left: 10%;
+}
+
+p {
+  center
 }
 
 iframe {
